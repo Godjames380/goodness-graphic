@@ -1,1067 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>GOODNESS GRAPHIC | Professional Graphic Design</title>
-
-<style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial,sans-serif;
-  background:#071426;
-  color:white;
-  line-height:1.6;
-}
-
-/* HEADER */
-
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  background:rgba(7,20,38,.97);
-  z-index:1000;
-  border-bottom:1px solid rgba(255,255,255,.1);
-}
-
-nav{
-  max-width:1100px;
-  margin:auto;
-  padding:14px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-/* LOGO */
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  font-size:19px;
-  font-weight:bold;
-  color:white;
-  letter-spacing:1px;
-}
-
-.logo span{
-  width:42px;
-  height:42px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border:2px solid #d9b44a;
-  border-radius:50%;
-  color:#d9b44a;
-  font-size:23px;
-}
-
-.logo strong{
-  color:white;
-}
-
-.logo small{
-  color:#d9b44a;
-  font-size:9px;
-  letter-spacing:3px;
-  margin-left:-62px;
-  margin-top:38px;
-}
-
-/* MENU */
-
-nav ul{
-  display:flex;
-  list-style:none;
-  gap:22px;
-}
-
-nav ul a{
-  color:white;
-  text-decoration:none;
-  font-size:14px;
-}
-
-nav ul a:hover{
-  color:#d9b44a;
-}
-
-/* HERO */
-
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:140px 20px 80px;
-  background:
-  radial-gradient(circle at top right,#163a64,#071426 60%);
-}
-
-.hero-content{
-  max-width:850px;
-}
-
-.hero h1{
-  font-size:clamp(45px,9vw,90px);
-  line-height:1;
-  margin-bottom:20px;
-}
-
-.hero h1 span{
-  color:#d9b44a;
-}
-
-.hero p{
-  font-size:20px;
-  color:#d7dce3;
-  margin-bottom:30px;
-}
-
-.btn{
-  display:inline-block;
-  padding:14px 24px;
-  margin:6px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
-}
-
-.btn-primary{
-  background:#d9b44a;
-  color:#071426;
-}
-
-.btn-primary:hover{
-  transform:translateY(-3px);
-  background:#f0cc65;
-}
-
-.btn-outline{
-  border:1px solid #d9b44a;
-  color:#d9b44a;
-}
-
-.btn-outline:hover{
-  background:#d9b44a;
-  color:#071426;
-}
-
-/* GENERAL */
-
-section{
-  padding:90px 20px;
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-}
-
-.section-title{
-  text-align:center;
-  margin-bottom:45px;
-}
-
-.section-title h2{
-  font-size:38px;
-  margin-bottom:10px;
-}
-
-.section-title span{
-  color:#d9b44a;
-}
-
-.section-title p{
-  color:#b8c0cb;
-}
-
-/* ABOUT */
-
-.about{
-  background:#0b1c31;
-}
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
-}
-
-.about-box{
-  padding:30px;
-  background:#102640;
-  border-radius:20px;
-  border:1px solid rgba(217,180,74,.2);
-}
-
-.about-box h3{
-  color:#d9b44a;
-  margin-bottom:15px;
-  font-size:24px;
-}
-
-.about-box p{
-  color:#cbd2dc;
-}
-
-/* SERVICES */
-
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.service-card{
-  background:#0d2139;
-  padding:30px 20px;
-  border-radius:18px;
-  text-align:center;
-  border:1px solid rgba(255,255,255,.08);
-  transition:.3s;
-}
-
-.service-card:hover{
-  transform:translateY(-7px);
-  border-color:#d9b44a;
-}
-
-.service-icon{
-  font-size:42px;
-  margin-bottom:12px;
-}
-
-.service-card h3{
-  color:#d9b44a;
-  margin-bottom:10px;
-}
-
-.service-card p{
-  color:#b8c0cb;
-}
-
-/* PORTFOLIO */
-
-.portfolio{
-  background:#0b1c31;
-}
-
-.portfolio-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.portfolio-card{
-  overflow:hidden;
-  background:#0d2139;
-  border-radius:18px;
-  border:1px solid rgba(217,180,74,.2);
-  transition:.3s;
-}
-
-.portfolio-card:hover{
-  transform:translateY(-6px);
-  border-color:#d9b44a;
-}
-
-.portfolio-card img{
-  width:100%;
-  height:280px;
-  object-fit:cover;
-  display:block;
-  cursor:pointer;
-}
-
-.portfolio-info{
-  padding:20px;
-}
-
-.portfolio-info h3{
-  color:#d9b44a;
-  margin-bottom:7px;
-}
-
-.portfolio-info p{
-  color:#b8c0cb;
-}
-
-/* WHY US */
-
-.why-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  text-align:center;
-}
-
-.why-card{
-  padding:25px 15px;
-  background:#0d2139;
-  border-radius:15px;
-}
-
-.why-card h3{
-  color:#d9b44a;
-  margin:10px 0;
-}
-
-.why-card p{
-  color:#b8c0cb;
-  font-size:14px;
-}
-
-/* CONTACT */
-
-.contact{
-  background:#0b1c31;
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:35px;
-}
-
-.contact-info{
-  background:#102640;
-  padding:30px;
-  border-radius:20px;
-}
-
-.contact-info h3{
-  color:#d9b44a;
-  font-size:24px;
-  margin-bottom:20px;
-}
-
-.contact-info p{
-  margin:15px 0;
-  color:#d0d6df;
-}
-
-form{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-}
-
-input,
-textarea{
-  width:100%;
-  padding:15px;
-  border:none;
-  border-radius:10px;
-  background:#102640;
-  color:white;
-  outline:none;
-}
-
-textarea{
-  min-height:140px;
-}
-
-button{
-  border:none;
-  cursor:pointer;
-  padding:15px;
-  border-radius:30px;
-  background:#d9b44a;
-  color:#071426;
-  font-weight:bold;
-  font-size:16px;
-}
-
-/* FOOTER */
-
-footer{
-  text-align:center;
-  padding:30px 20px;
-  background:#050e1a;
-  color:#9fa8b5;
-}
-
-footer strong{
-  color:#d9b44a;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width:58px;
-  height:58px;
-  background:#25D366;
-  color:white;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:27px;
-  text-decoration:none;
-  z-index:999;
-}
-
-/* IMAGE VIEWER */
-
-.image-viewer{
-  display:none;
-  position:fixed;
-  z-index:9999;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,.95);
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-}
-
-.image-viewer img{
-  max-width:95%;
-  max-height:90%;
-  object-fit:contain;
-  border-radius:10px;
-}
-
-#closeViewer{
-  position:absolute;
-  top:10px;
-  right:25px;
-  font-size:45px;
-  color:white;
-  cursor:pointer;
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-  nav{
-    flex-direction:column;
-    gap:12px;
-  }
-
-  nav ul{
-    gap:12px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  nav ul a{
-    font-size:12px;
-  }
-
-  .hero{
-    padding-top:170px;
-  }
-
-  .about-grid,
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .services-grid,
-  .portfolio-grid{
-    grid-template-columns:1fr;
-  }
-
-  .why-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .portfolio-card img{
-    height:auto;
-  }
-
-}
-
-@media(max-width:450px){
-
-  .why-grid{
-    grid-template-columns:1fr;
-  }
-
-  .hero h1{
-    font-size:50px;
-  }
-
-  .hero p{
-    font-size:17px;
-  }
-
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- HEADER -->
-
-<header>
-
-<nav>
-
-<div class="logo">
-  <span>G</span>
-  <strong>GOODNESS</strong>
-  <small>GRAPHIC</small>
-</div>
-
-<ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#services">Services</a></li>
-  <li><a href="#portfolio">Portfolio</a></li>
-  <li><a href="#contact">Contact</a></li>
-</ul>
-
-</nav>
-
-</header>
-
-
-<!-- HOME -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<h1>
-GOODNESS<br>
-<span>GRAPHIC</span>
-</h1>
-
-<p>
-Creative designs that make your brand stand out.
-Professional. Modern. Creative.
-</p>
-
-<a href="#services" class="btn btn-primary">
-View Services
-</a>
-
-<a href="#contact" class="btn btn-outline">
-Contact Me
-</a>
-
-<a href="https://wa.me/2347076594855"
-target="_blank"
-class="btn btn-primary">
-📱 Order Your Design
-</a>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>About <span>Goodness Graphic</span></h2>
-
-<p>Turning ideas into powerful visual designs.</p>
-
-</div>
-
-<div class="about-grid">
-
-<div class="about-box">
-
-<h3>Who We Are</h3>
-
-<p>
-GOODNESS GRAPHIC is a creative graphic design brand
-focused on creating beautiful and professional designs
-for businesses, brands and individuals.
-</p>
-
-</div>
-
-<div class="about-box">
-
-<h3>Our Mission</h3>
-
-<p>
-Our mission is to transform ideas into attractive designs
-that help businesses communicate better and build a strong
-brand identity.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Our <span>Services</span></h2>
-
-<p>Professional designs for your business and personal needs.</p>
-
-</div>
-
-<div class="services-grid">
-
-<div class="service-card">
-<div class="service-icon">🎨</div>
-<h3>Logo Design</h3>
-<p>Professional logos for your brand.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">📱</div>
-<h3>Social Media Design</h3>
-<p>Creative designs for social media.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">🪧</div>
-<h3>Banner Design</h3>
-<p>Professional banners and advertisements.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">💼</div>
-<h3>Business Card</h3>
-<p>Modern business card designs.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">📢</div>
-<h3>Flyer Design</h3>
-<p>Eye-catching promotional flyers.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">✨</div>
-<h3>Brand Identity</h3>
-<p>Complete visual branding solutions.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PORTFOLIO -->
-
-<section class="portfolio" id="portfolio">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>My <span>Portfolio</span></h2>
-
-<p>Some of my recent graphic design projects.</p>
-
-</div>
-
-<div class="portfolio-grid">
-
-
-<div class="portfolio-card">
-
-<img src="images/portfolio1.jpg"
-alt="Goodness Graphic Design">
-
-<div class="portfolio-info">
-
-<h3>Graphic Design</h3>
-
-<p>Creative promotional design.</p>
-
-</div>
-
-</div>
-
-
-<div class="portfolio-card">
-
-<img src="images/portfolio2.jpg"
-alt="Goodness Graphic Design">
-
-<div class="portfolio-info">
-
-<h3>Business Design</h3>
-
-<p>Professional business advertising.</p>
-
-</div>
-
-</div>
-
-
-<div class="portfolio-card">
-
-<img src="images/portfolio3.png"
-alt="Goodness Graphic Design">
-
-<div class="portfolio-info">
-
-<h3>Social Media Design</h3>
-
-<p>Creative social media graphic.</p>
-
-</div>
-
-</div>
-
-
-<div class="portfolio-card">
-
-<img src="images/portfolio4.png"
-alt="Goodness Graphic Design">
-
-<div class="portfolio-info">
-
-<h3>Promotional Design</h3>
-
-<p>Informational promotional graphic.</p>
-
-</div>
-
-</div>
-
-
-<div class="portfolio-card">
-
-<img src="images/portfolio5.jpg"
-alt="Goodness Graphic Design">
-
-<div class="portfolio-info">
-
-<h3>Academy Design</h3>
-
-<p>Educational promotional graphic.</p>
-
-</div>
-
-</div>
-
-
-<div class="portfolio-card">
-
-<img src="images/portfolio6.jpg"
-alt="Goodness Graphic Design">
-
-<div class="portfolio-info">
-
-<h3>Business Promotion</h3>
-
-<p>Professional advertising design.</p>
-
-</div>
-
-</div>
-
-
-<div class="portfolio-card">
-
-<img src="images/portfolio7.jpg"
-alt="Goodness Graphic Design">
-
-<div class="portfolio-info">
-
-<h3>Fashion Design</h3>
-
-<p>Fashion banner and advertising.</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- WHY CHOOSE US -->
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Why Choose <span>Us?</span></h2>
-
-</div>
-
-<div class="why-grid">
-
-<div class="why-card">
-<div>⭐</div>
-<h3>Creative</h3>
-<p>Fresh and creative design ideas.</p>
-</div>
-
-<div class="why-card">
-<div>💎</div>
-<h3>Quality</h3>
-<p>Professional and clean designs.</p>
-</div>
-
-<div class="why-card">
-<div>⚡</div>
-<h3>Fast</h3>
-<p>Quick response and delivery.</p>
-</div>
-
-<div class="why-card">
-<div>🤝</div>
-<h3>Reliable</h3>
-<p>Every project is taken seriously.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Let's <span>Work Together</span></h2>
-
-<p>Have a design project? Get in touch.</p>
-
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-info">
-
-<h3>Contact GOODNESS GRAPHIC</h3>
-
-<p>📞 Phone: 07076594855</p>
-
-<p>💬 WhatsApp: 07076594855</p>
-
-<p>🎨 Professional Graphic Design</p>
-
-<p>
-Available for logos, flyers, banners,
-business cards and other creative designs.
-</p>
-
-<a href="https://wa.me/2347076594855"
-target="_blank"
-class="btn btn-primary">
-Chat on WhatsApp
-</a>
-
-</div>
-
-
-<form id="contactForm">
-
-<input
-type="text"
-id="name"
-placeholder="Your Name"
-required
->
-
-<input
-type="tel"
-id="phone"
-placeholder="Your Phone Number"
-required
->
-
-<input
-type="text"
-id="service"
-placeholder="What design do you need?"
-required
->
-
-<textarea
-id="message"
-placeholder="Tell me about your project..."
-required>
-</textarea>
-
-<button type="submit">
-Send Message
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<p>
-© 2026 <strong>GOODNESS GRAPHIC</strong>.
-All Rights Reserved.
-</p>
-
-<p>
-Professional Graphic Design
-</p>
-
-</footer>
-
-
-<!-- WHATSAPP FLOATING BUTTON -->
-
-<a
-class="whatsapp"
-href="https://wa.me/2347076594855"
-target="_blank">
-💬
-</a>
-
-
-<!-- IMAGE VIEWER -->
-
-<div id="imageViewer" class="image-viewer">
-
-<span id="closeViewer">&times;</span>
-
-<img id="viewerImage" src="" alt="Portfolio Preview">
-
-</div>
-
-
-<!-- JAVASCRIPT -->
-
-<script>
-
-const portfolioImages =
-document.querySelectorAll(".portfolio-card img");
-
-const imageViewer =
-document.getElementById("imageViewer");
-
-const viewerImage =
-document.getElementById("viewerImage");
-
-const closeViewer =
-document.getElementById("closeViewer");
-
-
-portfolioImages.forEach(function(image){
-
-image.addEventListener("click",function(){
-
-imageViewer.style.display="flex";
-
-viewerImage.src=this.src;
-
-});
-
-});
-
-
-closeViewer.addEventListener("click",function(){
-
-imageViewer.style.display="none";
-
-});
-
-
-imageViewer.addEventListener("click",function(event){
-
-if(event.target===imageViewer){
-
-imageViewer.style.display="none";
-
-}
-
-});
-
-
-document
-.getElementById("contactForm")
-.addEventListener("submit",function(event){
-
-event.preventDefault();
-
-const name =
-document.getElementById("name").value;
-
-const phone =
-document.getElementById("phone").value;
-
-const service =
-document.getElementById("service").value;
-
-const message =
-document.getElementById("message").value;
-
-const whatsappMessage =
-"Hello GOODNESS GRAPHIC!%0A%0A"+
-"Name: "+encodeURIComponent(name)+
-"%0APhone: "+encodeURIComponent(phone)+
-"%0ADesign needed: "+encodeURIComponent(service)+
-"%0AProject details: "+encodeURIComponent(message);
-
-window.open(
-"https://wa.me/2347076594855?text="+
-whatsappMessage,
-"_blank"
-);
-
-});
-
-</script>
-
-</body>
-</html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GOODNESS GRAPHIC | Professional Graphic Designer</title>
+
+  <meta name="description" content="GOODNESS GRAPHIC - Professional graphic design services for businesses, brands and individuals.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(8, 8, 8, 0.95);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      color: #d4af37;
+      letter-spacing: 1px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .menu a {
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #d4af37;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      padding: 150px 20px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        radial-gradient(circle at top, #25200d 0%, #080808 45%);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .small-title {
+      color: #d4af37;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 9vw, 90px);
+      line-height: 1;
+      margin-bottom: 25px;
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #cccccc;
+      font-size: 18px;
+    }
+
+    .buttons {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-gold {
+      background: #d4af37;
+      color: #000;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-4px);
+      background: #f0cf63;
+    }
+
+    .btn-outline {
+      border: 1px solid #d4af37;
+      color: #d4af37;
+    }
+
+    .btn-outline:hover {
+      background: #d4af37;
+      color: #000;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 90px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .section-title span {
+      color: #d4af37;
+    }
+
+    .section-title p {
+      color: #aaa;
+    }
+
+    /* ABOUT */
+    .about {
+      background: #0e0e0e;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-box {
+      padding: 30px;
+      border: 1px solid #252525;
+      border-radius: 20px;
+      background: #121212;
+    }
+
+    .about-box h3 {
+      color: #d4af37;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .about-box p {
+      color: #bbbbbb;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .stat {
+      background: #171717;
+      padding: 25px;
+      text-align: center;
+      border-radius: 15px;
+      border: 1px solid #292929;
+    }
+
+    .stat h3 {
+      color: #d4af37;
+      font-size: 32px;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      padding: 30px 20px;
+      background: #111111;
+      border: 1px solid #292929;
+      border-radius: 18px;
+      transition: 
